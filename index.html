@@ -1,0 +1,239 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+a{color:inherit;text-decoration:none}
+.hero{padding:2.5rem 2rem 2rem;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;gap:1.5rem;align-items:flex-start}
+.avatar{width:56px;height:56px;border-radius:50%;background:#E6F1FB;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#0C447C;flex-shrink:0}
+.hero-label{font-size:12px;color:var(--color-text-tertiary);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px}
+.hero-name{font-size:28px;font-weight:500;color:var(--color-text-primary);line-height:1.2}
+.hero-title{font-size:15px;color:var(--color-text-secondary);margin-top:3px}
+.hero-bio{font-size:14px;color:var(--color-text-secondary);margin-top:0.8rem;line-height:1.7;max-width:540px}
+.hero-links{display:flex;gap:8px;margin-top:1rem;flex-wrap:wrap}
+.hero-link{font-size:12px;padding:5px 12px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);background:transparent}
+.hero-link:hover{background:var(--color-background-secondary)}
+.section{padding:1.8rem 2rem}
+.section+.section{border-top:0.5px solid var(--color-border-tertiary)}
+.sec-label{font-size:11px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.2rem}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.5rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.8rem;text-align:center}
+.stat-num{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.stat-lbl{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.skill-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem 1rem}
+.skill-name{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.skill-bar-bg{height:3px;background:var(--color-border-tertiary);border-radius:2px;overflow:hidden}
+.skill-bar{height:3px;border-radius:2px}
+.skill-sub{font-size:11px;color:var(--color-text-tertiary);margin-top:4px}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.proj-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.2rem;display:flex;flex-direction:column;gap:8px}
+.proj-card:hover{border-color:var(--color-border-secondary)}
+.proj-top{display:flex;align-items:center;justify-content:space-between}
+.proj-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
+.proj-link{font-size:11px;padding:3px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary)}
+.proj-link:hover{background:var(--color-background-secondary)}
+.proj-title{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.proj-desc{font-size:13px;color:var(--color-text-secondary);line-height:1.6;flex:1}
+.proj-tools{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.tool-pill{font-size:11px;padding:2px 8px;border-radius:4px;background:#E6F1FB;color:#0C447C}
+.tool-pill.green{background:#EAF3DE;color:#27500A}
+.tool-pill.amber{background:#FAEEDA;color:#633806}
+.tool-pill.purple{background:#EEEDFE;color:#3C3489}
+.edu-item{padding:0.8rem 0;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;gap:12px;align-items:flex-start}
+.edu-item:last-child{border-bottom:none}
+.edu-dot{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.edu-title{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.edu-sub{font-size:13px;color:var(--color-text-secondary);margin-top:2px}
+.edu-date{font-size:12px;color:var(--color-text-tertiary);margin-top:2px}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.cert-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.85rem 1rem}
+.cert-name{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.cert-by{font-size:12px;color:var(--color-text-tertiary);margin-top:3px}
+.contact-row{display:flex;flex-wrap:wrap;gap:8px}
+.contact-btn{font-size:13px;padding:8px 16px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-primary);cursor:pointer}
+.contact-btn:hover{background:var(--color-background-secondary)}
+</style>
+
+<h2 style="position:absolute;left:-9999px">Lakshmi Prasanna Tudimella — Data Analyst Portfolio</h2>
+
+<div class="hero">
+  <div class="avatar">LP</div>
+  <div>
+    <p class="hero-label">Data Analyst Portfolio</p>
+    <p class="hero-name">Lakshmi Prasanna Tudimella</p>
+    <p class="hero-title">MBA (Finance & HR) · Andhra Pradesh, India</p>
+    <p class="hero-bio">MBA graduate with hands-on project experience in Python-based data analysis, MySQL database design, and Power BI dashboards. Skilled in EDA, statistical testing, and visual storytelling. Seeking an entry-level Data Analyst role.</p>
+    <div class="hero-links">
+      <a class="hero-link" href="https://www.linkedin.com/in/lakshmi-prasanna-4417b0245/" target="_blank">LinkedIn ↗</a>
+      <a class="hero-link" href="https://github.com/lakshmitudimella123" target="_blank">GitHub ↗</a>
+      <a class="hero-link" href="mailto:lakshmitudimella123@gmail.com">lakshmitudimella123@gmail.com</a>
+      <span class="hero-link">+91-9133210653</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">At a glance</p>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">9.18</div><div class="stat-lbl">MBA CGPA</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Projects</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Certifications</div></div>
+    <div class="stat"><div class="stat-num">500+</div><div class="stat-lbl">Records scraped</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">Technical skills</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">SQL / MySQL</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:88%;background:#378ADD"></div></div>
+      <div class="skill-sub">Joins · Window Functions · Stored Procedures</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Power BI</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:85%;background:#534AB7"></div></div>
+      <div class="skill-sub">DAX · KPI Cards · Slicers · Drill-down</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:80%;background:#1D9E75"></div></div>
+      <div class="skill-sub">Pandas · Seaborn · Selenium · SciPy</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Excel</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:90%;background:#BA7517"></div></div>
+      <div class="skill-sub">Pivot Tables · VLOOKUP · Data Validation</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Statistics / EDA</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:78%;background:#D85A30"></div></div>
+      <div class="skill-sub">ANOVA · Uni/Bi/Multivariate Analysis</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">MIS Reporting</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:82%;background:#888780"></div></div>
+      <div class="skill-sub">KPI Tracking · Business Intelligence</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">Projects</p>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <div class="proj-icon" style="background:#EAF3DE">📈</div>
+        <a class="proj-link" href="https://github.com/lakshmitudimella123/stock-market-eda" target="_blank">View project ↗</a>
+      </div>
+      <div class="proj-title">Stock Market Analysis via Web Scraping</div>
+      <div class="proj-desc">Scraped 500+ real-time stock records from 35 pages using Selenium. Performed EDA and applied one-way ANOVA — confirmed statistically significant market cap differences (p &lt; 0.05), validating Groww's stock ranking logic.</div>
+      <div class="proj-tools">
+        <span class="tool-pill green">Python</span>
+        <span class="tool-pill green">Selenium</span>
+        <span class="tool-pill green">Pandas</span>
+        <span class="tool-pill green">SciPy</span>
+        <span class="tool-pill green">Seaborn</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <div class="proj-icon" style="background:#E6F1FB">🗄️</div>
+        <a class="proj-link" href="https://github.com/lakshmitudimella123/employee-management-sql" target="_blank">View project ↗</a>
+      </div>
+      <div class="proj-title">Employee Management System</div>
+      <div class="proj-desc">Designed a normalized 6-table relational database with PK/FK constraints. Wrote 30+ queries using RANK(), ROW_NUMBER(), LAG(), DENSE_RANK(). Built a monthly payroll summary VIEW and stored procedure.</div>
+      <div class="proj-tools">
+        <span class="tool-pill">MySQL</span>
+        <span class="tool-pill">Window Functions</span>
+        <span class="tool-pill">Views</span>
+        <span class="tool-pill">Stored Procedures</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <div class="proj-icon" style="background:#EEEDFE">📊</div>
+        <a class="proj-link" href="https://github.com/lakshmitudimella123/adidas-sales-dashboard" target="_blank">View project ↗</a>
+      </div>
+      <div class="proj-title">Adidas Sales Performance Dashboard</div>
+      <div class="proj-desc">Built an interactive Power BI dashboard analyzing $899.9M in US sales. Identified West region as top performer ($269.9M) and In-store as dominant sales channel ($357M) with real-time cross-filtering.</div>
+      <div class="proj-tools">
+        <span class="tool-pill purple">Power BI</span>
+        <span class="tool-pill purple">DAX</span>
+        <span class="tool-pill amber">Excel</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <div class="proj-icon" style="background:#FAEEDA">🌦️</div>
+        <a class="proj-link" href="https://github.com/lakshmitudimella123/telangana-weather-dashboard" target="_blank">View project ↗</a>
+      </div>
+      <div class="proj-title">Telangana Weather Analysis Dashboard</div>
+      <div class="proj-desc">Designed a 4-page interactive dashboard analyzing district-wise weather data (2021–2024) across all 33 Telangana districts. Key finding: July records highest rainfall; April–May are hottest months (~40°C avg max).</div>
+      <div class="proj-tools">
+        <span class="tool-pill purple">Power BI</span>
+        <span class="tool-pill purple">DAX</span>
+        <span class="tool-pill amber">Excel</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">Education & training</p>
+  <div class="edu-item">
+    <div class="edu-dot" style="background:#378ADD"></div>
+    <div>
+      <div class="edu-title">MBA — Finance & HR</div>
+      <div class="edu-sub">Annamacharya Institute of Technology & Sciences · CGPA: 9.18</div>
+      <div class="edu-date">2023 – 2025</div>
+    </div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-dot" style="background:#85B7EB"></div>
+    <div>
+      <div class="edu-title">B.Com — Computer Applications</div>
+      <div class="edu-sub">Sri Vaishnavi Degree College · 8.40</div>
+      <div class="edu-date">2020 – 2023</div>
+    </div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-dot" style="background:#B5D4F4"></div>
+    <div>
+      <div class="edu-title">Data Analytics Training</div>
+      <div class="edu-sub">Innomatics Research Labs, Bengaluru · Power BI, SQL, Python, MIS Reporting</div>
+      <div class="edu-date">Sep 2025 – Jan 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">Certifications</p>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-name">GenAI Powered Data Analytics Job Simulation</div>
+      <div class="cert-by">Tata / Forage · Jan 2026</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">Exploratory Data Analysis Certificate</div>
+      <div class="cert-by">Innomatics Research Labs</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">Data Analytics Training Completion</div>
+      <div class="cert-by">Innomatics Research Labs</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="sec-label">Contact</p>
+  <div class="contact-row">
+    <a class="contact-btn" href="mailto:lakshmitudimella123@gmail.com">✉ Email me</a>
+    <a class="contact-btn" href="https://www.linkedin.com/in/lakshmi-prasanna-4417b0245/" target="_blank">LinkedIn ↗</a>
+    <a class="contact-btn" href="https://github.com/lakshmitudimella123" target="_blank">GitHub ↗</a>
+  </div>
+</div>
